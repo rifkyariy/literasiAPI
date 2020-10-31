@@ -36,7 +36,7 @@ fetch(
     )
     .then(res => res.json()) // parse response as JSON (can be res.text() for plain response)
     .then(response => {
-        console.log(response);
+        document.body.innerHTML = JSON.stringify(response);
     })
     .catch(err => {
         console.error("sorry, there are no results for your search")
