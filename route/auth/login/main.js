@@ -27,8 +27,8 @@ fetch(
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
             credentials: 'same-origin', // include, *same-origin, omit
             headers: {
-                'Content-Type': 'application/json'
-                // 'Content-Type': 'application/x-www-form-urlencoded',
+                // 'Content-Type': 'application/json'
+                'Content-Type': 'application/x-www-form-urlencoded',
             },
             redirect: 'follow', // manual, *follow, error
             referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
@@ -36,7 +36,7 @@ fetch(
     )
     .then(res => res.json()) // parse response as JSON (can be res.text() for plain response)
     .then(response => {
-        document.body.innerHTML = JSON.stringify(response);
+        document.write(JSON.stringify(response));
     })
     .catch(err => {
         console.error("sorry, there are no results for your search")
